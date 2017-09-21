@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Github,git,Hexo,blog,Next," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="本文主要内容来自 http://www.jianshu.com/p/380290deb8f0/ 我这里主要是针对实践过程中遇到的问题进行注解，给自己一个记录并分享给大家  一、技术选型常见个人博客搭建方案搭建个人博客通常有如下选择：  WorkPress：  GitHubPages + Jekyll：  GitHubPages + Hexo：  上面提到的三种个人博客搭建方案，在对这三个方案做了简">
+<meta name="keywords" content="Github,git,Hexo,blog,Next">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始在github上快速建立一个博客（git+Hexo）">
+<meta property="og:url" content="http://yoursite.com/2017/09/21/从零开始在github上快速建立一个博客（git+Hexo）/index.html">
+<meta property="og:site_name" content="newblog">
+<meta property="og:description" content="本文主要内容来自 http://www.jianshu.com/p/380290deb8f0/ 我这里主要是针对实践过程中遇到的问题进行注解，给自己一个记录并分享给大家  一、技术选型常见个人博客搭建方案搭建个人博客通常有如下选择：  WorkPress：  GitHubPages + Jekyll：  GitHubPages + Hexo：  上面提到的三种个人博客搭建方案，在对这三个方案做了简">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1233754-01447f159dc3cee2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1233754-a04beb849e0f7a43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1233754-617d7652403ae281.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1233754-8b98ed5e4aaa22eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1233754-0cf9d6f37257fac0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1233754-0a8e742bc305ef5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-09-21T07:34:22.253Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从零开始在github上快速建立一个博客（git+Hexo）">
+<meta name="twitter:description" content="本文主要内容来自 http://www.jianshu.com/p/380290deb8f0/ 我这里主要是针对实践过程中遇到的问题进行注解，给自己一个记录并分享给大家  一、技术选型常见个人博客搭建方案搭建个人博客通常有如下选择：  WorkPress：  GitHubPages + Jekyll：  GitHubPages + Hexo：  上面提到的三种个人博客搭建方案，在对这三个方案做了简">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1233754-01447f159dc3cee2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'chuaan'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/09/21/从零开始在github上快速建立一个博客（git+Hexo）/"/>
+
+
+
+
+
+  <title>从零开始在github上快速建立一个博客（git+Hexo） | newblog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">newblog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/21/从零开始在github上快速建立一个博客（git+Hexo）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chuaan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="newblog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">从零开始在github上快速建立一个博客（git+Hexo）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-21T15:34:18+08:00">
+                2017-09-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/博客创建/" itemprop="url" rel="index">
+                    <span itemprop="name">博客创建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong><em>本文主要内容来自 <a href="http://www.jianshu.com/p/380290deb8f0/" target="_blank" rel="external">http://www.jianshu.com/p/380290deb8f0/</a> 我这里主要是针对实践过程中遇到的问题进行注解，给自己一个记录并分享给大家</em></strong></p>
+<blockquote>
+<p><strong>一、技术选型</strong><br><strong>常见个人博客搭建方案</strong><br>搭建个人博客通常有如下选择：</p>
+<ul>
+<li>WorkPress： </li>
+<li>GitHubPages + Jekyll： </li>
+<li>GitHubPages + Hexo：</li>
+</ul>
+<p>上面提到的三种个人博客搭建方案，在对这三个方案做了简单的了解之后，我选择了 GitHubPages + Hexo。主要是出于以下几点考虑：<br>WorkPress：一般需要独立域名（收费），对 MarkDown 不友好<br>GitHubPages + Jekell：免费，稍微有点麻烦<br>GitHubPages + Hexo：免费，使用简单，使用者众多…</p>
+</blockquote>
+<p><strong><em>个人经过实际使用，确实发现该博主提供的方法简单快捷，基本半天就能构建好一个可用的博客。</em></strong></p>
+<blockquote>
+<p><strong>Hexo 简介</strong><br>Hexo 是一个基于 Nodejs 的静态博客网站生成器，作者是来自台湾的 Tommy Chen(<a href="https://zespia.tw/" target="_blank" rel="external">https://zespia.tw/</a> )<br>特点：<br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持 Markdown<br>仅需一道指令即可部署到 GitHub Pages 和 Heroku<br>已移植 Octopress 插件<br>高扩展性、自订性<br>兼容于 Windows, Mac &amp; Linux<br><strong>二、博客搭建</strong><br>跟着我做，简简单单5-7分钟你即可拥有自己的个人博客。开始吧！<br>创建 GitHub 仓库<br><strong>注册/登录</strong><br>如果没有帐号，前往 <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> 页面完成注册：<br>如果有账号，前往 <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> 页面登录：<br><strong>创建仓库</strong><br>直接看图操作：</p>
+<p><strong>创建仓库：步骤一</strong><br><img src="http://upload-images.jianshu.io/upload_images/1233754-01447f159dc3cee2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><strong>创建仓库：步骤二</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1233754-a04beb849e0f7a43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</blockquote>
+<p>”步骤二“中，注意 Respository name 中一定要输入：你的用户名.github.io。其他地方不用修改，然后直接点 ”Create repository“ 按钮完成创建即可。</p>
+<blockquote>
+<p><strong>本地环境准备</strong><br><strong>Git 安装<br>Windows 中<br>1、下载 Git</strong><br>打开 <a href="https://git-scm.com/download/" target="_blank" rel="external">https://git-scm.com/download/</a> 官网，选择 Downloads 下面的 Windows（按照你的系统选择 32 位或者 64 位）。考虑到可能受网络环境影响，我已经把 Git 上传到网盘分享出来了，<a href="http://pan.baidu.com/s/1hrMjxHE/" target="_blank" rel="external">http://pan.baidu.com/s/1hrMjxHE/</a> 。<br><strong>2、安装 Git</strong><br>双击安装文件 -&gt; 下一步 -&gt; 下一步…<br>没有特殊要求的直接下一步即可，不用去修改默认选项。<br><strong>Mac OS 中</strong><br>话说 Mac 上的 XCode 自带了 Git。（汗！没装 XCode 怎么破）<br><strong>1、下载 Git</strong><br>打开 <a href="https://git-scm.com/download/" target="_blank" rel="external">https://git-scm.com/download/</a> 官网，选择 Downloads 下面的 Mac OS X。Mac版的 Git 也上传到网盘分享出来了，<a href="http://pan.baidu.com/s/1hrMjxHE/" target="_blank" rel="external">http://pan.baidu.com/s/1hrMjxHE/</a> 。<br><strong>2、安装 Git</strong><br>直接双击 dmg 文件安装即可。<br><strong>Nodejs安装</strong><br><strong>Windows 中<br>1、下载 Nodejs</strong><br>打开 <a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a> 下载页面，选择合适你当前系统版本的安装包。这里建议使用 LTS 版本的，当前的是 v4.4.3。我已经把 Windows 32/64 位的安装包都提交到网盘了，你可以直接从网盘下载， <a href="http://pan.baidu.com/s/1hrMjxHE/" target="_blank" rel="external">http://pan.baidu.com/s/1hrMjxHE/</a> 。<br><strong>2、安装 Nodejs</strong><br>双击安装文件 -&gt; 下一步 -&gt; 下一步…<br><strong>Mac OS 中</strong><br><strong>1、下载 Nodejs</strong><br>打开 <a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a> 下载页面，选择 Macintosh Installer 即可开始下载。网盘里面也上传了，<a href="http://pan.baidu.com/s/1hrMjxHE/" target="_blank" rel="external">http://pan.baidu.com/s/1hrMjxHE/</a> 。<br><strong>2、安装 Nodejs</strong><br>直接双击 pkg 文件安装即可。<br><strong>说明：</strong> Nodejs 也可以使用 nvm（Nodejs版本管理器）来安装，步骤如下：<br>1、安装 nvm<br>通过 brew 安装</p>
+</blockquote>
+<pre><code>$ brew install nvm
+</code></pre><p>$ mkdir ~/.nvm<br>    $ export NVM_DIR=~/.nvm<br>$ . $(brew –prefix nvm)/nvm.sh<br>$ source ~/.nvm/nvm.sh // 使配置生效</p>
+<blockquote>
+<p>使用 curl 安装</p>
+</blockquote>
+<pre><code>$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+</code></pre><p>$ source ~/.nvm/nvm.sh // 使配置生效</p>
+<blockquote>
+<p>2、安装 Nodejs 4<br>$ nvm install 4<br><strong>Hexo 安装</strong><br>Hexo 是今天的主角，先打开 <a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a> 官网。</p>
+<p>Hexo官网</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1233754-617d7652403ae281.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>对，如上图所示，就一条命令，很简单有没有。</p>
+</blockquote>
+<p><strong>Windows 中<br>1、打开命令行</strong><br>win+R，输入 cmd，回车<br><strong>2、输入命令</strong></p>
+</blockquote>
+<pre><code>$ npm install hexo-cli -g
+</code></pre><blockquote>
+<p>Mac OS 中<br>1、打开终端<br>不要问我终端在哪里…<br>2、输入命令</p>
+</blockquote>
+<pre><code>$ npm install hexo-cli -g
+</code></pre><p><strong><em>这个地方会遇到些问题因为npm是用找国外的服务器下载，所以很有可能一天都下不下来，或者下载失败，所以我用了如下的方式找了个国内镜像。</em></strong></p>
+<pre><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+</code></pre><p>$ cnpm install hexo-cli -g<br><strong><em>可以很明显地看出来在输入第一条命令之后，我们只要把以后所有遇到的npm改成cnpm就能快速地下载了。<sup>[1]</sup></em></strong></p>
+<blockquote>
+<p><strong>创建本地博客<br>Windows 中</strong><br>1、打开命令行，定位到你希望放置博客的位置<br><img src="http://upload-images.jianshu.io/upload_images/1233754-8b98ed5e4aaa22eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</blockquote>
+<p><strong><em>这里给从来没有接触过命令行的人解释一下，cd可以用来更改目录，cd e:指的是去e盘，cd 文件夹名 就是前往目标文件夹，此后就不再赘述了。</em></strong></p>
+<blockquote>
+<p>2、输入命令</p>
+</blockquote>
+<pre><code>hexo init 你的用户名.github.io// 建议和创建仓库时使用同一个
+</code></pre><blockquote>
+<p><strong>Mac OS 中</strong><br>1、打开终端，定位到你希望放置博客的位置<br><img src="http://upload-images.jianshu.io/upload_images/1233754-0cf9d6f37257fac0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>2、输入命令</p>
+</blockquote>
+<pre><code>hexo init 你的用户名.github.io// 建议和创建仓库时使用同一个
+</code></pre><blockquote>
+<p><strong>Next 安装</strong><br>经过上面步骤创建完本地博客之后，基本的博客系统就已经搭建好了，自带了 landscape 主题。不过该主题不是很符合我的审美，在网上搜索了一下 Hexo 主题，选择了用户量较大的 Next。<br>Next 是 iissnan 在 GitHub 上开源的一个 Hexo 主题，主打简洁。选择该主题有如下原因：</p>
+<ul>
+<li>简洁</li>
+<li>美观 </li>
+<li>功能齐全 </li>
+<li>使用者众多 </li>
+<li>文档齐全</li>
+</ul>
+<blockquote>
+<p>”说明：“在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml<br>。 其中，一份位于站点根目录下（即 xxx.github.io 目录下），主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置有主题作者提供，主要用于配置主题相关的选项。为了描述方便，在以下说明中，将前者称为 “站点配置文件”， 后者称为 “主题配置文件”。</p>
+</blockquote>
+<p><strong>看下怎么安装主题：</strong><br><strong>1、切换到上面生成的本地博客目录（xxx.github.io）</strong><br><img src="http://upload-images.jianshu.io/upload_images/1233754-0a8e742bc305ef5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>Mac OS 的终端上类似，把 dir 替换为 ls 即可。<br><strong>2、安装 Next 主题</strong></p>
+</blockquote>
+<pre><code>git clone https://github.com/iissnan/hexo-theme-next themes/next
+或在 Mac 上
+&amp; git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre><blockquote>
+<p><strong>3、使用 Next 主题</strong><br><strong>首先</strong>，复制一份打开本地博客目录下的 _config.yml 文件，命名为 _config_bak.yml，做为备份，以防改错<br><strong>然后</strong>，使用文本编辑器打开本地博客目录下的 _config.yml 文件，搜索，定位 theme 键值，将 theme 的值修改为 next</p>
+</blockquote>
+<pre><code>theme: next //刚刚安装的主题名称
+</code></pre><blockquote>
+<p>注意：该配置文件中的键值之间一定要有空格，否则轻则没有作用，重则报错，无法启动。<br><strong>4、站点配置文件基本项修改</strong><br>关于 Hexo 配置的详细信息请前往 <a href="https://hexo.io/zh-cn/docs/configuration.html/。" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html/。</a><br>这里先看看最基础的配置，也就是必须要改动的：<br>    title: xxx   博客的名字，也称站点名称</p>
+</blockquote>
+<pre><code>author: xxx  作者名字
+
+description: xxx  对站点的描述，搜索引擎会抓取，可以自定义（这个还是加上比较好）
+
+language: zh-Hans  语言 简体中文
+
+theme: next   配置主题
+
+deploy:  部署相关配置
+    type: git  使用 Git 提交
+    repo: https://github.com/xxx/xxx.github.io.git 就是存放博客的仓库地址
+</code></pre><blockquote>
+<p>上述配置是必须要修改的，再次强调，键值之间一定要 ”加空格“，请在文本编辑器中搜索定位后再修改。<br>站点配置文件详细配置示例</p>
+</blockquote>
+<pre><code> Hexo Configuration
+ Docs: https://hexo.io/docs/configuration.html
+ Source: https://github.com/hexojs/hexo/
+
+ Site 这里的配置，哪项配置反映在哪里，可以参考我的博客
+title: xxx  博客的名字，也称站点名称
+subtitle: xxx  副标题
+description: xxx  对站点的描述，搜索引擎会抓取，可以自定义
+author: xxx  作者名字
+language: zh-Hans  语言 简体中文
+timezone:   用默认的即可
+
+ URL 
+ 这项暂时不需要配置，绑定域名后，要创建 sitemap.xml 时再配置该项
+ If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;
+url:  http://xxx.com
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+ Directory
+ 目录，不要修改
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+ Writing 
+ 文章布局、写作格式的定义，不修改
+new_post_name: :title.md  File name of new posts
+default_layout: post
+titlecase: false  Transform title into titlecase
+external_link: true  Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+ Category &amp; Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+ Date / Time format 
+ 日期 / 时间 格式，不要修改
+ Hexo uses Moment.js to parse and display date
+ You can customize the date format as defined in
+ http://momentjs.com/docs//displaying/format/
+date_format: MMM D YYYY
+time_format: H:mm:ss
+
+ Pagination 
+ 每页显示文章数，可以自定义
+ Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+ Extensions 
+ 配置站点所用主题和插件，这里将默认主题注释，修改为 next
+ Plugins: https://hexo.io/plugins/
+ Themes: https://hexo.io/themes/
+theme: next
+theme: landscape
+
+ 头像
+ 注意：是 xxx.github.io/source 下的开始的相对路径，如果 source     文件夹下面没有 uploads 文件夹，那么新建一个。考虑到会博客中用很多图片，在 uploads 文件夹下请分好类，避免混乱
+avatar: /uploads/images/avatar.jpg
+
+ Deployment 
+ 本地博客部署到 github 上要配置这里
+ Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git  使用 Git 提交
+  repository: https://github.com/xxx/xxx.github.io.git  就是存放博客的仓库地址
+</code></pre><blockquote>
+<p>PS：是不是有点迫不及待想看看效果了，那好，先在本地跑起来试试，步骤如下：<br>1.打开命令行，定位到 xxx.github.io 目录</p>
+<p>2.输入命令：</p>
+</blockquote>
+<pre><code>hexo s  == hexo server 启动服务预览
+$ hexo s
+</code></pre><p><strong><em>这里应该会有人碰到一个问题就是说没有hexo s这个命令，就算是打hexo server也没有，是因为现在这个命令并不会随着之前的命令安装完毕，而是要自行安装，执行以下命令。<sup>[2]</sup></em></strong></p>
+<pre><code>cnpm install hexo-server
+</code></pre><blockquote>
+<p>启动成功可以看到提示，按照提示用浏览器打开提示网址，即可看到你的本地博客了，里面有一篇 Hello World</p>
+</blockquote>
+<p><strong><em>有些同学有可能4000这个端口被占用了，自己找一下方法解决，关掉相关软件或者换个端口就好了，主要是我没遇到这个问题，所以没法详细解释啦<sup>[[3]]</sup></em></strong></p>
+<blockquote>
+<p><strong>三、Next 配置</strong><br>当然，最权威的是看官方的说明文档，我在这里提供一个示例，供大家参考，你可以直接拷过去稍微改动一点就行。<br><strong>Next 配置详解</strong><br>Next 配置就是上面所说的”<strong>主题配置文件</strong>“，位于 xxx.github.io/themes/next 目录下，文件名为 _config.yml。老规矩，先备份一份 ”_config_bak.yml“，以防改错。<br>以我的博客为例，阐述一下需要配置的地方：</p>
+</blockquote>
+<pre><code> Set default keywords (Use a comma to separate)
+ 设置关键字
+keywords: &quot;Android, DIY&quot;
+
+ Specify the date when the site was setup
+ 设置博客开始时间
+since: 2016
+
+ When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -&gt; archives)
+ 设置菜单，就是[我的博客](http://diy-green.github.io/)左侧那一列
+menu:
+  home: /  在菜单上显示首页
+  archives: /archives  在菜单删显示全部
+  categories: /categories  在菜单上显示 分类
+  tags: /tags  在菜单上显示 标签
+  about: /about  在菜单上显示 关于
+  commonweal: /404.html
+
+ Schemes
+ 设置风格
+scheme: Muse
+scheme: Mist
+scheme: Pisces  我的就是这个双栏风格
+
+ Automatically Excerpt. Not recommand.
+ Please use &lt;!-- more --&gt; in the post to control excerpt accurately.
+auto_excerpt:
+  enable: true  设置是否显示阅读全文，文章较多的话，有必要设置为 true
+  length: 150
+
+ 一些第三方服务设置，这里只提一下”多说“，其他的请参考官方介绍
+ Make duoshuo show UA
+ user_id must NOT be null when admin_enable is true!
+ you can visit http://dev.duoshuo.com get duoshuo user id.
+duoshuo_info:
+  ua_enable: true
+  admin_enable: true
+  user_id: 0  **这里不要动，千万别动**
+  admin_nickname: DIY-green
+
+ Code Highlight theme
+ Available value:
+    normal | night | night eighties | night blue | night bright
+ https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
+ 代码高亮主题
+highlight_theme: night eighties
+
+ 打赏配置
+ 打赏说明文本
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+ 微信收款二维码
+wechatpay: /uploads/images/wechat-reward-image.png
+ 支付宝收款二维码
+alipay: /uploads/images/alipay-reward-image.png
+
+ 友情链接
+links_title: Links
+links:
+  DIY-green简书: http://www.jianshu.com/users/0ad0a0afc409/latest_articles
+
+
+ 订阅微信公众号
+ Wechat Subscriber
+wechat_subscriber:
+  enabled: true
+  qcode: /uploads/wechat-qcode.jpg
+  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！
+</code></pre><blockquote>
+<p><strong>创建分类页面</strong><br><strong>操作步骤</strong><br>打开命令行，定位到 xxx.github.io 目录<br>新建一个页面，命名为 categories</p>
+</blockquote>
+<pre><code>hexo new page categories
+或
+$ hexo new page categories
+</code></pre><blockquote>
+<p>根据提示找到新建的 index.md 文件，编辑</p>
+</blockquote>
+<pre><code> 这里有 &quot;---&quot;（这会破坏代码展示效果，所以注释了）
+title: All tags 
+date: 2016-04-25 11:45:45
+type: &quot;categories&quot;  将页面的类型设置为 categories
+，主题将自动为这个页面显示所有分类
+comments: false  如果有启用多说 或者 Disqus 评论，默认页面也会带有评论。需要关闭的话，设置为 false
+ 这里也有 &quot;---&quot;
+</code></pre><blockquote>
+<p><strong>创建标签云页面</strong><br><strong>操作步骤</strong><br>打开命令行，定位到 xxx.github.io 目录<br>新建一个页面，命名为 tags</p>
+</blockquote>
+<pre><code>hexo new page &quot;tags&quot;
+或
+$ hexo new page &quot;tags&quot;
+</code></pre><blockquote>
+<p>根据提示找到新建的 index.md 文件，编辑</p>
+</blockquote>
+<pre><code> 这里有 &quot;---&quot;
+title: All tags 
+date: 2016-04-27 08:56:40
+type: &quot;tags&quot;  将页面的类型设置为 tags
+，主题将自动为这个页面显示标签云
+comments: false  如果有启用多说 或者 Disqus 评论，默认页面也会带有评论。需要关闭的话，设置为 false
+ 这里也有 &quot;---&quot;
+</code></pre><blockquote>
+<p><strong>注意事项</strong></p>
+<ol>
+<li>格式 再次强调，设置项的键值之间一定要有空格  </li>
+<li>菜单上显示 ”分类“ 等栏目 如果需要在菜单上显示 ”分类“ 和 ”标签“<br> 等，那么记得打开注释，或者添加该条目</li>
+<li>关于第三方服务的 ”duoshuo_info“ 在配置该项的时候，user_id<br> 键对应的值不要修改，也就是保持为0，具体原因我不清楚，如果修改了该值，那么你的博客会变得一片空白</li>
+<li>分类和标签云页面 首先，要使用”hexo new page“命令生成这两个页面，否则报404。其次，这两个页面是主题自动维护的，只要我们的文章按照规矩来就行了，下面会详细说明</li>
+</ol>
+<p><strong>四、写博客与发布</strong><br>经过上述步骤，本地博客和主题设置已经完成，那么接下来就是写博客了。<br>你的博客文件需要存放到 xxx.github.io/source/_posts 文件夹中，在该文件夹下面你可以按照你的博客分类建立一系列的文件夹来管理博客原文件。<br>操作步骤<br>1、用 Markdown 写文章<br>不管你用什么编辑 Markdown 文件，最后生成的 md 文件放到 xxx.github.io/source/_posts 文件夹或其子文件夹中即可，如：</p>
+</blockquote>
+<pre><code>---
+title: 个人博客搭建详解（Windows和Mac通用版）  这是标题
+categories:   这里写的分类会自动汇集到 categories 页面上，分类可以多级
+- 实用技术  一级分类
+- 个人博客  二级分类 
+tags:    这里写的标签会自动汇集到 tags 页面上
+- 实用  可配置多个标签，注意格式
+- 个人博客
+---
+</code></pre><p><strong><em>一定要注意-后面要加一个空格，不然这份文章是载入不上去的。</em></strong></p>
+<blockquote>
+<p>Hexo 是一个基于nodejs 的静态博客网站生成器，作者是来自台湾的 Tommy Chen<br>注意：分类和标签是自动维护的，关键是的文章要按照规定的格式写，如上格式，可以参考。<br>说明：Next 主题会自动生成目录，这也省了不少事。<br><strong>2、在本地运行测试</strong><br>打开命令行定位到 xxx.github.io 目录，输入命令：<br>hexo s  这是简写 == hexo server  启动服务预览<br>或</p>
+</blockquote>
+<pre><code>$ hexo s
+</code></pre><blockquote>
+<p><strong>3、在浏览器查看效果</strong><br>在浏览器中输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 访问本地博客，看看效果吧<br><strong>4、安装自动部署发布工具</strong><br>这里用到了 hexo-deployer-git，使用如下命令安装：</p>
+</blockquote>
+<pre><code>npm install hexo-deployer-git --save
+或
+$ npm install hexo-deployer-git --save
+</code></pre><p><strong><em>请用cnpm命令，不然很有可能下不下来。</em></strong></p>
+<blockquote>
+<p><strong>5、发布到 GitHubPages</strong><br>确认在本地上显示无误之后，就可以将 md 转为 静态网页文件，然后发布到 GitHubPages 上去了。</p>
+</blockquote>
+<pre><code>hexo clean 清除缓存 网页正常情况下可以忽略此条命令
+hexo g 生成静态网页
+hexo d 开始部署
+
+也可以一次性执行
+hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
+</code></pre><blockquote>
+<p>如果是第一次部署，终端会提示要求输入用户名和密码。等命令执行完之后，过几分钟打开 <a href="http://xxx.github.io/" target="_blank" rel="external">http://xxx.github.io/</a> 即可看到你的个人博客了。以后要发布新文章，执行上述命令即可。<br><strong>注意事项</strong></p>
+<ol>
+<li>Git 的 bug 有个老版本的 Git 有个 bug，上传的时候会提示非法域名这类的，要解决该问题，最简单的方法就是更新Git，用最新版的 Git</li>
+<li>关于页面空白 主题配置文件中的 ”duoshuo_info“ 下的 ”user_id“ 如果是非 ”0“，会导致该问题</li>
+<li>特殊字符导致报错 如添加新博客的时候报错了，而且提示的是 js 中某些地方报错，那么很可能是 md文件中存在特殊字符（不是正常显示的字符，不是说特殊符号，能正常显示的都不是这里说的特殊字符），把特殊字符删除即可</li>
+<li>Hexo 命令的常见报错 可以参考这篇文章：HEXO+Github,搭建属于自己的博客</li>
+<li>使用hexo，如果换了电脑怎么更新博客？ 这个问题相信大家都关心，知乎上有比较详细的解答。我说一下我的解决方法吧！<br><strong>方案一</strong>：在新电脑上配置好本地博客环境，然后，直接拷贝原电脑上的 xxx.github.io 文件夹到新电脑上即可。<br><strong>方案二</strong>： 将xxx.github.io 文件夹同步到网上(如：Dropbox等)，其他任何电脑（配置好了本地博客环境）要用的时候，从网上同步下来即可。</li>
+</ol>
+</blockquote>
+<p><strong><em>后面的是原作者提供的一些资料，我这里就不一个个整理了，直接复制粘贴，如果想看的可以自行去原地址查看。</em></strong></p>
+<blockquote>
+<p><strong>五、更多资源</strong><br>Markdown 编辑器<br>Windows 上推荐：<br>Haroopad<br>Smark<br>MarkdownPad<br>Mac OS 上推荐：<br>Mou<br>在线资源推荐：<br>简书<br>作业部落<br>马克飞象<br>Markdown语法参考<br>Markdown 语法说明(简体中文版)<br>Markdown——入门指南<br>markdown写作中的常见问题<br>提示：更简单的学习方法上是直接用示例修改，可参考：作业部落 或者<br>马克飞象 的示例文稿。<br>思维导图<br>Windows 上推荐：<br>Mindjet<br>Mac OS 上推荐：<br>XMind<br>在线资源推荐：<br>ProcessOn<br>百度脑图<br>MINDPIN<br>Hexo 相关资料<br>Hexo官网<br>hexo常用命令笔记<br>Next 相关资料<br>hexo-theme-next<br>Next 使用文档<br>更多主题<br>Hexo Themes<br>有哪些好看的 Hexo 主题？<br>绑定顶级域名<br>GitHub Pages绑定顶级域名的方法<br>怎样将域名绑定到github pages 博客上<br>第三方服务<br>站长工具<br>百度站长工具<br>站长之家工具<br>360云监控<br>数据统计<br>百度统计<br>不蒜子<br>说明<br>更多的配置可以去看看官方文档，我对我的博客目前的效果已经比较满意。我觉得简洁就是美，我们应该专注内容。更多的设置以及喜欢折腾的朋友自己去百度、Google 吧！<br>我的个人博客<br>DIY-green<br>我的GitHub<br>参考<br>WordPress.org<br>每个人都应该有一个Jekyll博客<br>Hexo Themes<br>Hexo官网<br>Hexo官方文档<br>GitHub+Hexo+Next搭建免费独立个人博客<br>hexo-theme-next<br>Next主题官方文档<br>hexo系列教程：（一）hexo介绍<br>hexo系列教程：（二）搭建hexo博客<br>hexo系列教程：（三）hexo博客的配置、使用<br>玩转hexo博客之next<br>使用Hexo + Next搭建静态博客<br>hexo<br>如何使用10个小时搭建出个人域名而又Geek的独立博客？<br>傻瓜都可以利用github pages建博客<br>HEXO+Github,搭建属于自己的博客<br>通过GitHub Pages建立个人站点（详细步骤）<br>免费顶级TK域名注册图文教程+DNS修改！<br>Freenom免费域名.TK、.CF、.ML、.GA注册及使用方法<br>hexo你的博客<br>5分钟 搭建免费个人博客<br>hexo–搭建<br>如何搭建一个独立博客——简明Github Pages与Hexo教程<br>Hexo服务器端布署及Dropbox同步</p>
+<p>作者：diygreen<br>链接：<a href="http://www.jianshu.com/p/380290deb8f0/" target="_blank" rel="external">http://www.jianshu.com/p/380290deb8f0/</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<p>[1]<a href="http://blog.csdn.net/jzooo/article/details/46781805/" target="_blank" rel="external">http://blog.csdn.net/jzooo/article/details/46781805/</a><br>[2]<a href="https://www.zhihu.com/question/28847824?sort=created/" target="_blank" rel="external">https://www.zhihu.com/question/28847824?sort=created/</a><br>[3]<a href="https://www.zhihu.com/question/28847824?sort=created/" target="_blank" rel="external">https://www.zhihu.com/question/28847824?sort=created/</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Github/" rel="tag"># Github</a>
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/blog/" rel="tag"># blog</a>
+          
+            <a href="/tags/Next/" rel="tag"># Next</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/20/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <p class="site-author-name" itemprop="name">Chuaan</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chuaan</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
